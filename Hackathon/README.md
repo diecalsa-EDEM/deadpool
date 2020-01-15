@@ -5,7 +5,7 @@ With this tool, they schedule bicycle movements to ensure availability, and also
 
 Here you can have high level architecture of the application provided. 
 
-![Exercise architecture](https://github.com/rlopezherrero/GFT-EDEM-MasterData/blob/master/Hackathon/img/Diagrama.png)
+![Exercise architecture](https://github.com/diecalsaEDEM/deadpool/blob/583e6b5a031289eaf8059463d4e442d1febe6c8b/Hackathon/img/DiagramaDetallado.png)
 
 ## Setup
 
