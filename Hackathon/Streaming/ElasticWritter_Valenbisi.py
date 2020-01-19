@@ -15,7 +15,7 @@ from apache_beam.options.pipeline_options import SetupOptions
 from elasticsearch import Elasticsearch 
 
 import json
-
+from datetime import datetime
 
 class LocationConcat(beam.DoFn):
     """
@@ -25,13 +25,14 @@ class LocationConcat(beam.DoFn):
     def process(self, element):
         
         #{"empty_slots":17,"extra":{"address":"Economista Gay - Constituci\xc3\xb3n","banking":false,"bonus":false,"last_update":1578482815000,"slots":20,"status":"OPEN","uid":136},"free_bikes":3,"id":"1f6b81722ca23ce520f77207b868afa9","latitude":39.4899091610835,"longitude":-0.375701108044157,"name":"136_CALLE_ECONOMISTA_GAY","timestamp":"2020-01-08T11:34:20.782000Z"}'
-        
+        date = datetime.now()
         item = json.loads(element)
         return [{'empty_slots':item['empty_slots'],
                  'free_bikes':item['free_bikes'],
                  'id':item['id'],
                  'name':item['name'],
-                 'timestamp':item['timestamp'],
+                 'modified':item['timestamp'],
+                 'timestamp':date.strftime("%Y-%m-%dT%H:%M:%S.000+01:00"),
                  'latitude':item['latitude'],
                  'longitude':item['longitude'],
                  'address':item['extra']['address'],

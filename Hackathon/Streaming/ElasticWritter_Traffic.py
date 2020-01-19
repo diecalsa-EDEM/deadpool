@@ -13,15 +13,15 @@ import json
 import ast
 from pyproj import Proj, transform
 import numpy as np
-
+from datetime import datetime
 
 
 class processTraficData(beam.DoFn):
 
     def process(self, element):
-        
-        #{"empty_slots":17,"extra":{"address":"Economista Gay - Constituci\xc3\xb3n","banking":false,"bonus":false,"last_update":1578482815000,"slots":20,"status":"OPEN","uid":136},"free_bikes":3,"id":"1f6b81722ca23ce520f77207b868afa9","latitude":39.4899091610835,"longitude":-0.375701108044157,"name":"136_CALLE_ECONOMISTA_GAY","timestamp":"2020-01-08T11:34:20.782000Z"}'
-        
+
+        date = datetime.now()
+
         item = json.loads(element)
         
         #Conversion de coordenadas
@@ -46,12 +46,12 @@ class processTraficData(beam.DoFn):
         
         if item['estado']=='':
             item['estado']=0
-        
             
         return [{'idtramo':int(item['idtramo']),
                  'denominacion':item['denominacion'],
                  'modified':item['modified'],
                  'estado':int(item['estado']),
+                 'timestamp':date.strftime("%Y-%m-%dT%H:%M:%S.000+01:00"),
                  'location':{
                          "type":"linestring",
                          "coordinates":coordenadas
@@ -65,7 +65,7 @@ class IndexTraficDocument(beam.DoFn):
     
     def process(self,element):
         
-        res = self.es.index(index='prueba_gs3',body=element)
+        res = self.es.index(index='traffic_status',body=element)
         
         print(res)
     
