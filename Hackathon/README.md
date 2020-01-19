@@ -3,7 +3,7 @@
 Valencia City Hall has already a control dashboard to visualize Valenbici stations status on real time. 
 With this tool, they schedule bicycle movements to ensure availability, and also can do analytics to improve the network adding more slots or creating new stations. 
 
-Here you can have high level architecture of the application provided. 
+Here you can have high level architecture of the application provided.
 
 ![Exercise architecture](img/Diagrama.png)
 
