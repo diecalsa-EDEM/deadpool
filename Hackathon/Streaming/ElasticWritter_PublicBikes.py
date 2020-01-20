@@ -12,8 +12,8 @@ from apache_beam.options.pipeline_options import StandardOptions
 from apache_beam.options.pipeline_options import SetupOptions
 from elasticsearch import Elasticsearch 
 import json
-from datetime import datetime
 from pyproj import Proj, transform
+from datetime import datetime
 
 class LocationConcat(beam.DoFn):
     """
@@ -22,7 +22,6 @@ class LocationConcat(beam.DoFn):
 
     def process(self, element):
         
-        #{"empty_slots":17,"extra":{"address":"Economista Gay - Constituci\xc3\xb3n","banking":false,"bonus":false,"last_update":1578482815000,"slots":20,"status":"OPEN","uid":136},"free_bikes":3,"id":"1f6b81722ca23ce520f77207b868afa9","latitude":39.4899091610835,"longitude":-0.375701108044157,"name":"136_CALLE_ECONOMISTA_GAY","timestamp":"2020-01-08T11:34:20.782000Z"}'
         date = datetime.now()
         item = json.loads(element)
         
@@ -33,10 +32,10 @@ class LocationConcat(beam.DoFn):
         #Conversión de coordenadas
         x2,y2 = transform(inProj, outProj,item['geometry']['coordinates'][0],item['geometry']['coordinates'][1])
         
-        return [{'plazas':int(item['properties']['plazas']),
+        return [{'timestamp':date.strftime("%Y-%m-%dT%H:%M:%S.000+01:00"),
+                 'plazas':int(item['properties']['plazas']),
                  'tipo':item['properties']['tipo'],
                  'id':item['properties']['id'],
-                 'timestamp':date.strftime("%Y-%m-%dT%H:%M:%S.000+01:00"),
                  'location':[y2,x2]               
                  }]
 
