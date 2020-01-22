@@ -8,11 +8,11 @@ from apache_beam.options.pipeline_options import PipelineOptions
 from apache_beam.options.pipeline_options import GoogleCloudOptions
 from apache_beam.options.pipeline_options import StandardOptions
 from apache_beam.options.pipeline_options import SetupOptions
+from apache_beam.options.pipeline_options import DirectOptions
 from elasticsearch import Elasticsearch 
 import json
 import ast
-from pyproj import Proj, transform
-import numpy as np
+import utm
 from datetime import datetime
 
 
@@ -25,20 +25,14 @@ class processTraficData(beam.DoFn):
         item = json.loads(element)
         
         #Conversion de coordenadas
-        inProj = Proj('epsg:25830')
-        outProj = Proj('epsg:4258')
-        
+
         #Pasamos de string a array de coordenadas (float)
         coordenadas = []
         coord = ast.literal_eval(item['coordinates'])
         
-        #Conversión de coordenadas
-        coords = np.asarray(coord)
-        x2,y2 = transform(inProj, outProj,coords[:,0],coords[:,1])
-        
-        for i,j in zip(x2,y2):
-            c = [j,i]
-            coordenadas.append(c)
+        for i in coord:
+            x,y   = utm.to_latlon(i[0],i[1],30, 'S')
+            coordenadas.append([y,x])
         
         
         if item['idtramo']=='':
@@ -107,7 +101,8 @@ def run_trafic(argv=None, save_main_session=True):
   pipeline_options.view_as(StandardOptions).runner = 'DirectRunner'
   #pipeline_options.view_as(StandardOptions).runner = 'DataflowRunner'
   pipeline_options.view_as(StandardOptions).streaming = True
-
+  
+  pipeline_options.view_as(DirectOptions).direct_num_workers = 4
  
   pipeline_options.view_as(SetupOptions).save_main_session = save_main_session
  

@@ -12,8 +12,8 @@ from apache_beam.options.pipeline_options import StandardOptions
 from apache_beam.options.pipeline_options import SetupOptions
 from elasticsearch import Elasticsearch 
 import json
-from pyproj import Proj, transform
 from datetime import datetime
+import utm
 
 class LocationConcat(beam.DoFn):
     """
@@ -25,12 +25,8 @@ class LocationConcat(beam.DoFn):
         date = datetime.now()
         item = json.loads(element)
         
-        #Conversion de coordenadas
-        inProj = Proj('epsg:25830')
-        outProj = Proj('epsg:4258')
-        
         #Conversión de coordenadas
-        x2,y2 = transform(inProj, outProj,item['geometry']['coordinates'][0],item['geometry']['coordinates'][1])
+        x2,y2   = utm.to_latlon(item['geometry']['coordinates'][0],item['geometry']['coordinates'][1],30, 'S')
         
         return [{'timestamp':date.strftime("%Y-%m-%dT%H:%M:%S.000+01:00"),
                  'plazas':int(item['properties']['plazas']),
