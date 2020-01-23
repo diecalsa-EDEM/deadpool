@@ -2,7 +2,7 @@
 <template encoding-version="1.2">
     <description></description>
     <groupId>5743ba0b-016e-1000-5835-110dc43b2e92</groupId>
-    <name>deadpool</name>
+    <name>HyperFUTURE</name>
     <snippet>
         <controllerServices>
             <id>c340ca39-d259-3c50-0000-000000000000</id>
@@ -581,7 +581,7 @@
                             </entry>
                             <entry>
 <key>gcp-pubsub-publish-batch-size</key>
-<value>15</value>
+<value>50</value>
                             </entry>
                         </properties>
                         <runDurationMillis>0</runDurationMillis>
@@ -612,47 +612,22 @@
             <variables/>
         </processGroups>
         <processGroups>
-            <id>4d6a080f-4935-347d-0000-000000000000</id>
+            <id>44fe25a1-5f16-3177-0000-000000000000</id>
             <parentGroupId>f520ba3b-c165-3cda-0000-000000000000</parentGroupId>
             <position>
-                <x>1.09405517578125</x>
-                <y>203.40846252441406</y>
+                <x>408.72265625</x>
+                <y>207.56976318359375</y>
             </position>
             <comments></comments>
             <contents>
                 <connections>
-                    <id>236aeccc-6d1a-3e52-0000-000000000000</id>
-                    <parentGroupId>4d6a080f-4935-347d-0000-000000000000</parentGroupId>
+                    <id>3d5ae180-3419-3c7a-0000-000000000000</id>
+                    <parentGroupId>44fe25a1-5f16-3177-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
-                        <groupId>4d6a080f-4935-347d-0000-000000000000</groupId>
-                        <id>ca100227-26b4-3b70-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                    </destination>
-                    <flowFileExpiration>0 sec</flowFileExpiration>
-                    <labelIndex>1</labelIndex>
-                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-                    <name></name>
-                    <selectedRelationships>split</selectedRelationships>
-                    <source>
-                        <groupId>4d6a080f-4935-347d-0000-000000000000</groupId>
-                        <id>ceaf758f-c82c-33e2-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                    </source>
-                    <zIndex>0</zIndex>
-                </connections>
-                <connections>
-                    <id>e16e91dd-e291-385d-0000-000000000000</id>
-                    <parentGroupId>4d6a080f-4935-347d-0000-000000000000</parentGroupId>
-                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-                    <destination>
-                        <groupId>4d6a080f-4935-347d-0000-000000000000</groupId>
-                        <id>ceaf758f-c82c-33e2-0000-000000000000</id>
+                        <groupId>44fe25a1-5f16-3177-0000-000000000000</groupId>
+                        <id>e0e924c0-7c3e-3d65-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
@@ -664,17 +639,129 @@
                     <name></name>
                     <selectedRelationships>Response</selectedRelationships>
                     <source>
-                        <groupId>4d6a080f-4935-347d-0000-000000000000</groupId>
-                        <id>9f10c5e4-1172-320f-0000-000000000000</id>
+                        <groupId>44fe25a1-5f16-3177-0000-000000000000</groupId>
+                        <id>b7cdccb2-eeb5-33b1-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>a514ec47-e89b-3974-0000-000000000000</id>
+                    <parentGroupId>44fe25a1-5f16-3177-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>44fe25a1-5f16-3177-0000-000000000000</groupId>
+                        <id>25d66398-45e0-3950-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>split</selectedRelationships>
+                    <source>
+                        <groupId>44fe25a1-5f16-3177-0000-000000000000</groupId>
+                        <id>e0e924c0-7c3e-3d65-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <processors>
-                    <id>9f10c5e4-1172-320f-0000-000000000000</id>
-                    <parentGroupId>4d6a080f-4935-347d-0000-000000000000</parentGroupId>
+                    <id>25d66398-45e0-3950-0000-000000000000</id>
+                    <parentGroupId>44fe25a1-5f16-3177-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1272.0</x>
+                        <x>904.1630689897502</x>
+                        <y>426.0170889982728</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-gcp-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.9.2</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>gcp-project-id</key>
+<value>
+    <name>gcp-project-id</name>
+</value>
+                            </entry>
+                            <entry>
+<key>GCP Credentials Provider Service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.gcp.credentials.service.GCPCredentialsService</identifiesControllerService>
+    <name>GCP Credentials Provider Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>gcp-pubsub-topic</key>
+<value>
+    <name>gcp-pubsub-topic</name>
+</value>
+                            </entry>
+                            <entry>
+<key>gcp-pubsub-publish-batch-size</key>
+<value>
+    <name>gcp-pubsub-publish-batch-size</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>gcp-project-id</key>
+<value>hackathon-diego</value>
+                            </entry>
+                            <entry>
+<key>GCP Credentials Provider Service</key>
+<value>c340ca39-d259-3c50-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>gcp-pubsub-topic</key>
+<value>bike_measurement</value>
+                            </entry>
+                            <entry>
+<key>gcp-pubsub-publish-batch-size</key>
+<value>50</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>PublishGCPubSub</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>retry</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.gcp.pubsub.PublishGCPubSub</type>
+                </processors>
+                <processors>
+                    <id>b7cdccb2-eeb5-33b1-0000-000000000000</id>
+                    <parentGroupId>44fe25a1-5f16-3177-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>895.0</x>
                         <y>-15.0</y>
                     </position>
                     <bundle>
@@ -868,7 +955,7 @@
                             </entry>
                             <entry>
 <key>Remote URL</key>
-<value>http://apigobiernoabiertortod.valencia.es/apirtod/rest/datasets/estado_trafico.json?items=1000</value>
+<value>http://apigobiernoabiertortod.valencia.es/apirtod/rest/datasets/intensidad_espiras.json?items=150</value>
                             </entry>
                             <entry>
 <key>SSL Context Service</key>
@@ -965,7 +1052,7 @@
                             </entry>
                         </properties>
                         <runDurationMillis>0</runDurationMillis>
-                        <schedulingPeriod>180 sec</schedulingPeriod>
+                        <schedulingPeriod>300 sec</schedulingPeriod>
                         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
@@ -996,98 +1083,11 @@
                     <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
                 </processors>
                 <processors>
-                    <id>ca100227-26b4-3b70-0000-000000000000</id>
-                    <parentGroupId>4d6a080f-4935-347d-0000-000000000000</parentGroupId>
+                    <id>e0e924c0-7c3e-3d65-0000-000000000000</id>
+                    <parentGroupId>44fe25a1-5f16-3177-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1281.1630689897502</x>
-                        <y>427.0170889982728</y>
-                    </position>
-                    <bundle>
-                        <artifact>nifi-gcp-nar</artifact>
-                        <group>org.apache.nifi</group>
-                        <version>1.9.2</version>
-                    </bundle>
-                    <config>
-                        <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
-                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                        <descriptors>
-                            <entry>
-<key>gcp-project-id</key>
-<value>
-    <name>gcp-project-id</name>
-</value>
-                            </entry>
-                            <entry>
-<key>GCP Credentials Provider Service</key>
-<value>
-    <identifiesControllerService>org.apache.nifi.gcp.credentials.service.GCPCredentialsService</identifiesControllerService>
-    <name>GCP Credentials Provider Service</name>
-</value>
-                            </entry>
-                            <entry>
-<key>gcp-pubsub-topic</key>
-<value>
-    <name>gcp-pubsub-topic</name>
-</value>
-                            </entry>
-                            <entry>
-<key>gcp-pubsub-publish-batch-size</key>
-<value>
-    <name>gcp-pubsub-publish-batch-size</name>
-</value>
-                            </entry>
-                        </descriptors>
-                        <executionNode>ALL</executionNode>
-                        <lossTolerant>false</lossTolerant>
-                        <penaltyDuration>30 sec</penaltyDuration>
-                        <properties>
-                            <entry>
-<key>gcp-project-id</key>
-<value>hackathon-diego</value>
-                            </entry>
-                            <entry>
-<key>GCP Credentials Provider Service</key>
-<value>c340ca39-d259-3c50-0000-000000000000</value>
-                            </entry>
-                            <entry>
-<key>gcp-pubsub-topic</key>
-<value>trafic</value>
-                            </entry>
-                            <entry>
-<key>gcp-pubsub-publish-batch-size</key>
-<value>15</value>
-                            </entry>
-                        </properties>
-                        <runDurationMillis>0</runDurationMillis>
-                        <schedulingPeriod>0 sec</schedulingPeriod>
-                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                        <yieldDuration>1 sec</yieldDuration>
-                    </config>
-                    <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>PublishGCPubSub</name>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>failure</name>
-                    </relationships>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>retry</name>
-                    </relationships>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>success</name>
-                    </relationships>
-                    <state>STOPPED</state>
-                    <style/>
-                    <type>org.apache.nifi.processors.gcp.pubsub.PublishGCPubSub</type>
-                </processors>
-                <processors>
-                    <id>ceaf758f-c82c-33e2-0000-000000000000</id>
-                    <parentGroupId>4d6a080f-4935-347d-0000-000000000000</parentGroupId>
-                    <position>
-                        <x>1278.397011461873</x>
-                        <y>221.117668197865</y>
+                        <x>897.397011461873</x>
+                        <y>218.117668197865</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -1149,26 +1149,26 @@
                     <type>org.apache.nifi.processors.standard.SplitJson</type>
                 </processors>
             </contents>
-            <name>Num Bicis Valencia</name>
+            <name>Bike Measurement</name>
             <variables/>
         </processGroups>
         <processGroups>
-            <id>59d59a81-6226-3d03-0000-000000000000</id>
+            <id>4d921f6b-e9b0-3673-0000-000000000000</id>
             <parentGroupId>f520ba3b-c165-3cda-0000-000000000000</parentGroupId>
             <position>
-                <x>405.0616455078125</x>
-                <y>202.13411045074463</y>
+                <x>4.884765625</x>
+                <y>204.92007446289062</y>
             </position>
             <comments></comments>
             <contents>
                 <connections>
-                    <id>0bb6800d-86ce-395d-0000-000000000000</id>
-                    <parentGroupId>59d59a81-6226-3d03-0000-000000000000</parentGroupId>
+                    <id>7546ffa5-cfbb-3d54-0000-000000000000</id>
+                    <parentGroupId>4d921f6b-e9b0-3673-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
-                        <groupId>59d59a81-6226-3d03-0000-000000000000</groupId>
-                        <id>f62c9440-00cf-3208-0000-000000000000</id>
+                        <groupId>4d921f6b-e9b0-3673-0000-000000000000</groupId>
+                        <id>5969bbd8-fe4a-3027-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
@@ -1180,20 +1180,20 @@
                     <name></name>
                     <selectedRelationships>split</selectedRelationships>
                     <source>
-                        <groupId>59d59a81-6226-3d03-0000-000000000000</groupId>
-                        <id>0eceaff3-dcf8-30c1-0000-000000000000</id>
+                        <groupId>4d921f6b-e9b0-3673-0000-000000000000</groupId>
+                        <id>ec3ccd10-9595-3c78-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
-                    <id>1fc87571-21d4-3ac2-0000-000000000000</id>
-                    <parentGroupId>59d59a81-6226-3d03-0000-000000000000</parentGroupId>
+                    <id>94ecb588-2a44-36f9-0000-000000000000</id>
+                    <parentGroupId>4d921f6b-e9b0-3673-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
-                        <groupId>59d59a81-6226-3d03-0000-000000000000</groupId>
-                        <id>0eceaff3-dcf8-30c1-0000-000000000000</id>
+                        <groupId>4d921f6b-e9b0-3673-0000-000000000000</groupId>
+                        <id>ec3ccd10-9595-3c78-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
@@ -1205,18 +1205,105 @@
                     <name></name>
                     <selectedRelationships>Response</selectedRelationships>
                     <source>
-                        <groupId>59d59a81-6226-3d03-0000-000000000000</groupId>
-                        <id>8fae01ff-d66c-3858-0000-000000000000</id>
+                        <groupId>4d921f6b-e9b0-3673-0000-000000000000</groupId>
+                        <id>ff5c10df-2bbc-378d-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <processors>
-                    <id>0eceaff3-dcf8-30c1-0000-000000000000</id>
-                    <parentGroupId>59d59a81-6226-3d03-0000-000000000000</parentGroupId>
+                    <id>5969bbd8-fe4a-3027-0000-000000000000</id>
+                    <parentGroupId>4d921f6b-e9b0-3673-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1278.397011461873</x>
-                        <y>221.117668197865</y>
+                        <x>904.1630689897502</x>
+                        <y>426.0170889982728</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-gcp-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.9.2</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>gcp-project-id</key>
+<value>
+    <name>gcp-project-id</name>
+</value>
+                            </entry>
+                            <entry>
+<key>GCP Credentials Provider Service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.gcp.credentials.service.GCPCredentialsService</identifiesControllerService>
+    <name>GCP Credentials Provider Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>gcp-pubsub-topic</key>
+<value>
+    <name>gcp-pubsub-topic</name>
+</value>
+                            </entry>
+                            <entry>
+<key>gcp-pubsub-publish-batch-size</key>
+<value>
+    <name>gcp-pubsub-publish-batch-size</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>gcp-project-id</key>
+<value>hackathon-diego</value>
+                            </entry>
+                            <entry>
+<key>GCP Credentials Provider Service</key>
+<value>c340ca39-d259-3c50-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>gcp-pubsub-topic</key>
+<value>public_bike_stations</value>
+                            </entry>
+                            <entry>
+<key>gcp-pubsub-publish-batch-size</key>
+<value>50</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>PublishGCPubSub</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>retry</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.gcp.pubsub.PublishGCPubSub</type>
+                </processors>
+                <processors>
+                    <id>ec3ccd10-9595-3c78-0000-000000000000</id>
+                    <parentGroupId>4d921f6b-e9b0-3673-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>897.397011461873</x>
+                        <y>218.117668197865</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -1247,7 +1334,7 @@
                         <properties>
                             <entry>
 <key>JsonPath Expression</key>
-<value>$['resources'][*]</value>
+<value>$['features'][*]</value>
                             </entry>
                             <entry>
 <key>Null Value Representation</key>
@@ -1278,10 +1365,10 @@
                     <type>org.apache.nifi.processors.standard.SplitJson</type>
                 </processors>
                 <processors>
-                    <id>8fae01ff-d66c-3858-0000-000000000000</id>
-                    <parentGroupId>59d59a81-6226-3d03-0000-000000000000</parentGroupId>
+                    <id>ff5c10df-2bbc-378d-0000-000000000000</id>
+                    <parentGroupId>4d921f6b-e9b0-3673-0000-000000000000</parentGroupId>
                     <position>
-                        <x>1272.0</x>
+                        <x>895.0</x>
                         <y>-15.0</y>
                     </position>
                     <bundle>
@@ -1475,7 +1562,7 @@
                             </entry>
                             <entry>
 <key>Remote URL</key>
-<value>http://apigobiernoabiertortod.valencia.es/apirtod/rest/datasets/estado_trafico.json?items=1000</value>
+<value>http://mapas.valencia.es/lanzadera/opendata/aparcabicis/JSON</value>
                             </entry>
                             <entry>
 <key>SSL Context Service</key>
@@ -1572,7 +1659,7 @@
                             </entry>
                         </properties>
                         <runDurationMillis>0</runDurationMillis>
-                        <schedulingPeriod>180 sec</schedulingPeriod>
+                        <schedulingPeriod>260000 min</schedulingPeriod>
                         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
@@ -1602,95 +1689,8 @@
                     <style/>
                     <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
                 </processors>
-                <processors>
-                    <id>f62c9440-00cf-3208-0000-000000000000</id>
-                    <parentGroupId>59d59a81-6226-3d03-0000-000000000000</parentGroupId>
-                    <position>
-                        <x>1281.1630689897502</x>
-                        <y>427.0170889982728</y>
-                    </position>
-                    <bundle>
-                        <artifact>nifi-gcp-nar</artifact>
-                        <group>org.apache.nifi</group>
-                        <version>1.9.2</version>
-                    </bundle>
-                    <config>
-                        <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
-                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                        <descriptors>
-                            <entry>
-<key>gcp-project-id</key>
-<value>
-    <name>gcp-project-id</name>
-</value>
-                            </entry>
-                            <entry>
-<key>GCP Credentials Provider Service</key>
-<value>
-    <identifiesControllerService>org.apache.nifi.gcp.credentials.service.GCPCredentialsService</identifiesControllerService>
-    <name>GCP Credentials Provider Service</name>
-</value>
-                            </entry>
-                            <entry>
-<key>gcp-pubsub-topic</key>
-<value>
-    <name>gcp-pubsub-topic</name>
-</value>
-                            </entry>
-                            <entry>
-<key>gcp-pubsub-publish-batch-size</key>
-<value>
-    <name>gcp-pubsub-publish-batch-size</name>
-</value>
-                            </entry>
-                        </descriptors>
-                        <executionNode>ALL</executionNode>
-                        <lossTolerant>false</lossTolerant>
-                        <penaltyDuration>30 sec</penaltyDuration>
-                        <properties>
-                            <entry>
-<key>gcp-project-id</key>
-<value>hackathon-diego</value>
-                            </entry>
-                            <entry>
-<key>GCP Credentials Provider Service</key>
-<value>c340ca39-d259-3c50-0000-000000000000</value>
-                            </entry>
-                            <entry>
-<key>gcp-pubsub-topic</key>
-<value>trafic</value>
-                            </entry>
-                            <entry>
-<key>gcp-pubsub-publish-batch-size</key>
-<value>15</value>
-                            </entry>
-                        </properties>
-                        <runDurationMillis>0</runDurationMillis>
-                        <schedulingPeriod>0 sec</schedulingPeriod>
-                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                        <yieldDuration>1 sec</yieldDuration>
-                    </config>
-                    <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>PublishGCPubSub</name>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>failure</name>
-                    </relationships>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>retry</name>
-                    </relationships>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>success</name>
-                    </relationships>
-                    <state>STOPPED</state>
-                    <style/>
-                    <type>org.apache.nifi.processors.gcp.pubsub.PublishGCPubSub</type>
-                </processors>
             </contents>
-            <name>Aparcabicis Valencia</name>
+            <name>Public Bike Stations Status</name>
             <variables/>
         </processGroups>
         <processGroups>
@@ -2113,7 +2113,7 @@
                             </entry>
                         </properties>
                         <runDurationMillis>0</runDurationMillis>
-                        <schedulingPeriod>180 sec</schedulingPeriod>
+                        <schedulingPeriod>420 sec</schedulingPeriod>
                         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
@@ -2204,7 +2204,7 @@
                             </entry>
                             <entry>
 <key>gcp-pubsub-publish-batch-size</key>
-<value>15</value>
+<value>50</value>
                             </entry>
                         </properties>
                         <runDurationMillis>0</runDurationMillis>
@@ -2231,9 +2231,9 @@
                     <type>org.apache.nifi.processors.gcp.pubsub.PublishGCPubSub</type>
                 </processors>
             </contents>
-            <name>Estado tráfico Valencia</name>
+            <name>Traffic Status</name>
             <variables/>
         </processGroups>
     </snippet>
-    <timestamp>01/16/2020 08:25:37 CET</timestamp>
+    <timestamp>01/23/2020 19:35:53 CET</timestamp>
 </template>
