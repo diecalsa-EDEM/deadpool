@@ -1,6 +1,6 @@
 # Hackathon 2: Improve Smart City application
 
-![Exercise architecture](img/hackaton_logo.png)
+![Deadpool logo](img/hackaton_logo.png)
 
 ## Setup production
 
